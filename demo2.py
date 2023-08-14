@@ -9,7 +9,7 @@ def plot_scenewise():
     loader = CameraParameterLoader()
     visualizer = CameraPoseVisualizer([-50, 50], [-50, 50], [0, 100])
     list_scene = list(filter(os.path.isdir, glob.glob(os.path.join('dataset', '*', 'trajectory'))))
-
+    print(list_scene)
     for idx_scene, scene in enumerate(list_scene):
         list_frame_annotation = glob.glob(os.path.join(scene, '[0-9][0-9][0-9][0-9][0-9][0-9].json'))
         for idx_frame, frame_annotation in enumerate(list_frame_annotation):
